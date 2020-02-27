@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head th:fragment="head">
+
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/index.css}" rel="stylesheet" />
+
+
+    <title th:text="'Notes' + ${title == null ? '' : ' :: ' + title}">Coops Notes</title>
+    <meta charset="UTF-8">
+    <title>Workout Tracker</title>
+</head>
+
+<body>
+<!--Navigation Setup-->
+<div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <a th:href="@{/}" class="navbar-brand">Notes</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a th:href="@{/edit}">Edit</a></li>
+            <li><a th:href="@{/search}">Search</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--Navigation bar on side-->
+<div th:fragment="side-nav">
+    <div id="mySidenav" class="sidenav">
+        <a href="#">HTML & CSS</a>
+        <a href="#">Java</a>
+        <a href="#">JavaScript</a>
+        <a href="#">C#</a>
+    </div>
+</div>
+
+<!--Container for selected note-->
+
+
+
+
+</body>
+</html>
