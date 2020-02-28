@@ -1,11 +1,9 @@
 package com.cooper_notes.Notes.data;
 
-
-
-import jdk.jfr.Event;
+import com.cooper_notes.Notes.models.NotesEvents;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.CrudRepository;
 
 @Repository
-public interface NotesRepository extends CrudRepository<Event, Integer> {
+public interface NotesRepository extends CrudRepository<NotesEvents, Integer> {
 }
