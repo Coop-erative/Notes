@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/categories/index.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<!--Display list in Category    TODO:update table once fixed-->
+<div th:fragment="list_notes_in_category">
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Notes:</th>
+            </tr>
+        </thead>
+        <tr th:each="NotesEvents: ${events}">
+            <td th:text="NotesEvents.category}"></td>
+            <td th:text="NotesEvents.title}"></td>
+            <td th:text="NotesEvents.notes}"></td>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>

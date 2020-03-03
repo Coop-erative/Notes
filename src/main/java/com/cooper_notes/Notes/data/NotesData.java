@@ -2,14 +2,12 @@ package com.cooper_notes.Notes.data;
 
 
 import com.cooper_notes.Notes.models.NotesEvents;
-import jdk.jfr.Event;
-
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class NotesData {
+
     private static final Map<Integer, NotesEvents> events = new HashMap<>();
 
      public static Collection<NotesEvents> getAll() {

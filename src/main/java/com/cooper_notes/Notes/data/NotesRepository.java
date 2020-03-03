@@ -6,4 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 @Repository
 public interface NotesRepository extends CrudRepository<NotesEvents, Integer> {
+
+
 }

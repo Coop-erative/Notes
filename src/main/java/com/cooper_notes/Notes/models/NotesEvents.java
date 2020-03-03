@@ -8,30 +8,23 @@ import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
-public class NotesEvents {
+public class NotesEvents extends AbstractEntity {
     //id, category, textNotes
-    @Id
-    @GeneratedValue
-    private int id;
 
     private String category;
 
     private String textNotes;
 
-    private NotesEventsType type;
+//    private NotesEventsType type;
 
-    public NotesEvents(String category, String textNotes, NotesEventsType type) {
+    public NotesEvents(String category, String textNotes) {
         this.category = category;
         this.textNotes = textNotes;
-        this.type = type;
     }
 
     public NotesEvents() {}
 
     //getters and setters
-    public int getId() {
-        return id;
-    }
 
     public String getCategory() {
         return category;
@@ -49,31 +42,10 @@ public class NotesEvents {
         this.textNotes = textNotes;
     }
 
-    public NotesEventsType getType() {
-        return type;
-    }
-
-    public void setType(NotesEventsType type) {
-        this.type = type;
-    }
-
-//    //Overrides
+    //    //Overrides
     @Override
     public String toString() {
         return category;
-    }
-//TODO: equals override problem
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Event event = (Event) o;
-//        return id == event.id;
-//    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
 

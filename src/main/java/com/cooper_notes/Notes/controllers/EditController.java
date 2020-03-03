@@ -12,19 +12,7 @@ public class EditController extends ActionsController{
     //Navigation Controller
     @RequestMapping(value ={"/edit"})
     public String edit(Model model) {
-        actionChoices.put("home", "Home");
-        actionChoices.put("edit", "Edit");
-        actionChoices.put("search", "Search");
-        model.addAttribute("actions", actionChoices);
         return "edit";
     }
-
-    @GetMapping
-    public String displayAllNotesEvents(Model model) {
-        model.addAttribute("title", "All Events");
-        model.addAttribute("events", NotesData.getAll());
-        return "events/edit";
-    }
-
 
 }

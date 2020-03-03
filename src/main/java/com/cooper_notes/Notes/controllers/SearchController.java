@@ -9,12 +9,6 @@ public class SearchController extends ActionsController{
     //Navigation Controller
     @RequestMapping(value ={"/search"})
     public String search(Model model) {
-        actionChoices.put("home", "Home");
-        actionChoices.put("edit", "Edit");
-        actionChoices.put("search", "Search");
-
-        model.addAttribute("actions", actionChoices);
-
         return "search";
     }
 }
